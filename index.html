@@ -1015,7 +1015,7 @@ const CHAPTERS = [
 
 const EVENTS = [
   { year:"570", title:"Naissance de Mahomet", place:"La Mecque", body:"Mahomet est né vers 570 à La Mecque, dans le Hedjaz, d'après la Sira (sa biographie traditionnelle). Son père Abd Allah, du clan Hachim de la tribu des Quraychites, meurt avant sa naissance ; sa mère Amina meurt quand il a six ans.", tag:"naissance" },
-  { year:"25 ans", title:"Mariage avec Khadija", place:"La Mecque", body:"Khadija, riche commerçante de sa tribu, l'embauche pour gérer ses caravanes. Impressionnée par son intégrité, elle lui propose de l'épouser. Il a 25 ans, elle en a 40. Ils restent mariés 25 ans (le syllabus ne donne pas l'année du mariage).", tag:"vie privée" },
+  { year:"25 ans", title:"Mariage avec Khadija", place:"La Mecque", body:"Khadija, riche commerçante de sa tribu, l'embauche pour gérer ses caravanes. Impressionnée par son intégrité, elle lui propose de l'épouser. Il a 25 ans, elle en a 40. Ils restent mariés 25 ans jusqu'à la mort de Khadija.", tag:"vie privée" },
   { year:"610", title:"Première révélation", place:"Mont Hira", body:"Mahomet devient prophète dès sa première vision sur le mont Hira, près de La Mecque. Selon la tradition musulmane, un ange identifié à Gabriel lui transmet la première des 114 révélations qui constitueront le Coran. Sa prédication commence : il dénonce les riches marchands et appelle à la justice envers les pauvres.", tag:"religion" },
   { year:"615", title:"Persécutions, exil vers l'Éthiopie", place:"La Mecque → Abyssinie", body:"Les fidèles deviennent nombreux, ce qui provoque une grande opposition. Entre 615 et 616, Mahomet conseille à ses partisans de se réfugier : sa lutte contre les idoles païennes bouleverse l'équilibre des clans. Une première vague part pour l'Éthiopie chrétienne.", tag:"opposition" },
   { year:"622", title:"L'Hégire", place:"La Mecque → Yathrib (Médine)", body:"Entre juillet et septembre 622, Mahomet et ses partisans quittent La Mecque pour Yathrib (l'ancienne Médine), où il a de la famille par sa grand-mère. Ce départ marque le début du calendrier musulman. À Médine, il s'allie avec les tribus arabes et juives — alliance vite rompue avec les juifs (prière vers La Mecque et non Jérusalem).", tag:"tournant" },
@@ -1052,7 +1052,7 @@ const GLOSSARY = [
   { term:"Quraychites", def:"Tribu puissante de La Mecque, qui contrôle l'argent, le commerce et la religion. Mahomet appartient au clan Hachim de cette tribu." },
   { term:"Kaaba", def:"Sanctuaire à La Mecque. Avant l'islam, on y trouvait les statues des dieux du polythéisme arabe ; il devient le centre du monothéisme musulman." },
   { term:"Hadjdj", def:"Pèlerinage. Lors du pèlerinage de 632, Mahomet en fixe les règles, qui excluent les incroyants." },
-  { term:"Yathrib", def:"Ancien nom de Médine. Le syllabus l'évoque aussi sous le nom « Madinat al-Nabi » à propos de l'arrivée de Mahomet en 622." },
+  { term:"Yathrib", def:"Ancien nom de Médine. On le retrouve aussi sous le nom « Madinat al-Nabi » (la ville du Prophète) à propos de l'arrivée de Mahomet en 622." },
 ];
 
 const QUIZ = [
@@ -1065,9 +1065,9 @@ const QUIZ = [
   { q:"Comment La Mecque est-elle reconquise en 630 ?", options:["Par un long siège","Par une trahison interne","Pacifiquement, sans une goutte de sang","Par alliance avec l'empire byzantin"], answer:2, explain:"« Sans qu'une seule goutte de sang ne soit versée, La Mecque est reconquise pacifiquement. »" },
   { q:"À quelle date Mahomet meurt-il ?", options:["8 juin 632","Janvier 630","Septembre 622","610"], answer:0, explain:"« Il tombe malade et meurt à Médine le 8 juin 632. »" },
   { q:"Avant l'islam, les Arabes étaient principalement…", options:["Chrétiens","Juifs","Polythéistes","Athées"], answer:2, explain:"« Avant que l'islam n'arrive en arabie les Arabes étaient des polythéistes. »" },
-  { q:"D'après le syllabus, qu'est-ce qui a permis au message de voyager si vite ?", options:["L'imprimerie","Les réseaux de commerce et les caravanes","Les empires byzantin et perse","Les écoles religieuses"], answer:1, explain:"« Les caravanes ne transportaient pas que des marchandises, elles transportaient aussi des infos et des rumeurs. »" },
+  { q:"Qu'est-ce qui a permis au message de Mahomet de voyager si vite ?", options:["L'imprimerie","Les réseaux de commerce et les caravanes","Les empires byzantin et perse","Les écoles religieuses"], answer:1, explain:"« Les caravanes ne transportaient pas que des marchandises, elles transportaient aussi des infos et des rumeurs. »" },
   { q:"Que fait l'historien, contrairement au croyant ?", options:["Il adhère à une foi","Il explique par des miracles","Il étudie des sources et reste neutre","Il pratique sa religion"], answer:2, explain:"L'historien : « étudier des sources, situer dans le temps, rester neutre, chercher des causes logiques »." },
-  { q:"Qui est la première personne à se convertir à l'islam d'après le syllabus ?", options:["Abou Bakr","Abou Talib","Khadija","Amina"], answer:2, explain:"« Khadija […] sera la première personne à se convertir à l'islam bien avant que Mahomet ne s'exile à Médine. »" },
+  { q:"Qui est la première personne à se convertir à l'islam ?", options:["Abou Bakr","Abou Talib","Khadija","Amina"], answer:2, explain:"« Khadija […] sera la première personne à se convertir à l'islam bien avant que Mahomet ne s'exile à Médine. »" },
 ];
 
 const FLASHCARDS = [
@@ -1308,7 +1308,7 @@ const HomePage = ({ go, progress, favorites, badges }) => {
               <span><Icon name="check" size={14}/> {earned}/{badges.length} badges</span>
             </div>
           </div>
-          <ProgressBar value={progress} label="Lecture du syllabus"/>
+          <ProgressBar value={progress} label="Progression du cours"/>
         </Card>
       </section>
       <section className="chapters-grid">
@@ -1337,7 +1337,7 @@ const HomePage = ({ go, progress, favorites, badges }) => {
         <div className="tools-grid">
           <Card as="button" className="tool-card" onClick={()=>go("chronologie")}><Icon name="timeline" size={22}/><h3>Chronologie</h3><p>9 jalons de 570 à 632.</p></Card>
           <Card as="button" className="tool-card" onClick={()=>go("flashcards")}><Icon name="card" size={22}/><h3>Flashcards</h3><p>{FLASHCARDS.length} cartes mémoire.</p></Card>
-          <Card as="button" className="tool-card" onClick={()=>go("quiz")}><Icon name="quiz" size={22}/><h3>Quiz</h3><p>{QUIZ.length} questions du syllabus.</p></Card>
+          <Card as="button" className="tool-card" onClick={()=>go("quiz")}><Icon name="quiz" size={22}/><h3>Quiz</h3><p>{QUIZ.length} questions sur le cours.</p></Card>
           <Card as="button" className="tool-card" onClick={()=>go("glossaire")}><Icon name="book" size={22}/><h3>Glossaire</h3><p>{GLOSSARY.length} mots à connaître.</p></Card>
         </div>
       </section>
@@ -1358,7 +1358,7 @@ const IntroductionPage = ({ fav, onFav }) => (
   <div className="page page-prose">
     <ChapterHeader number="I" kicker="Notre enquête" title="Introduction" sub="Pas un cours de religion. Une enquête d'historien." fav={fav} onFav={onFav}/>
     <div className="prose">
-      <p className="lead">Dans ce syllabus, on va parler du prophète Mahomet. On va le situer dans le temps et dans l'espace, retracer les grands moments de sa vie, et comprendre comment et pourquoi son message s'est diffusé aussi vite à l'époque.</p>
+      <p className="lead">Dans ce cours, on va parler du prophète Mahomet. On va le situer dans le temps et dans l'espace, retracer les grands moments de sa vie, et comprendre comment et pourquoi son message s'est diffusé aussi vite à l'époque.</p>
       <p>Mais on n'est pas là pour faire un cours de religion. Pour cette mission, on s'est mis dans la peau de vrais historiens. Et un historien ne se laisse pas influencer par ses croyances : il lui faut des preuves et des faits validés scientifiquement.</p>
       <p>Du coup, dans ce dossier, on va faire une séparation entre les faits historiques prouvés d'un côté, et les croyances religieuses de l'autre.</p>
       <Card className="quote">
@@ -1401,7 +1401,7 @@ const TempsEspacePage = ({ fav, onFav }) => (
     <div className="prose">
       <p className="lead">Mahomet n'est pas hors du monde : il vit dans une société bien précise, qui a ses propres règles. D'après la Sira, il est né en 570 à La Mecque, dans le Hedjaz.</p>
       <StylizedMap/>
-      <p className="caption">Carte stylisée d'après le syllabus — repères principaux.</p>
+      <p className="caption">Carte de la péninsule arabique au VIIe siècle — repères principaux.</p>
       <h2>Un carrefour commercial</h2>
       <p>À cette époque, la région est un immense carrefour commercial. Il y a beaucoup d'échanges entre le Yémen, la Syrie et l'Abyssinie chrétienne (l'actuelle Éthiopie). La Mecque est une grande étape pour les caravanes. Autour de la ville, on trouve plein de tribus bédouines qui élèvent des chameaux pour transporter les marchandises.</p>
       <Card className="callout callout-historian">
@@ -1462,7 +1462,7 @@ const DiffusionPage = ({ fav, onFav }) => (
       ))}
     </div>
     <Card className="callout">
-      <div className="callout-head"><Icon name="compass" size={18}/><span>Image du syllabus</span></div>
+      <div className="callout-head"><Icon name="compass" size={18}/><span>Document visuel</span></div>
       <ImagePlaceholder ratio="16 / 9" label="[ image · La Kaaba à La Mecque ]" note="Ancien sanctuaire polythéiste devenu le centre du monothéisme musulman."/>
     </Card>
   </div>
@@ -1470,7 +1470,7 @@ const DiffusionPage = ({ fav, onFav }) => (
 
 const FactsPage = ({ fav, onFav }) => (
   <div className="page page-prose">
-    <ChapterHeader number="II.d" kicker="L'œil de l'historien" title="Faits historiques vs croyances religieuses" sub="Le tableau du syllabus, à confronter colonne par colonne." fav={fav} onFav={onFav}/>
+    <ChapterHeader number="II.d" kicker="L'œil de l'historien" title="Faits historiques vs croyances religieuses" sub="À confronter colonne par colonne : ce que fait l'historien vs ce que vit le croyant." fav={fav} onFav={onFav}/>
     <div className="facts-table">
       <div className="facts-head">
         <div className="facts-col facts-col-h"><Icon name="scale" size={18}/><span>Ce que fait l'historien</span></div>
@@ -1494,12 +1494,12 @@ const ConclusionPage = ({ fav, onFav }) => (
       <p className="lead">En gros, dans notre travail, on a compris que Mahomet est un personnage très important pour l'histoire, pas seulement pour la religion.</p>
       <p>Ce qu'on retient, c'est que l'islam ne s'est pas propagé par magie. Il s'est propagé parce que les gens en avaient marre des inégalités, parce que les marchands racontaient ce qu'ils entendaient dans les autres villes, et parce que Mahomet a été un bon chef pour unir les tribus qui se faisaient la guerre.</p>
       <p>Le plus important dans notre mission de groupe, c'était d'apprendre à ne pas mélanger la croyance et l'histoire. On a vu qu'on peut étudier la vie d'un prophète de façon neutre, comme on étudie la vie d'un roi ou d'un empereur, en cherchant des preuves et des explications logiques.</p>
-      <h2>Questions ouvertes du syllabus</h2>
+      <h2>Questions ouvertes</h2>
       <div className="open-questions">
         <Card><div className="kicker">Sur la méthode</div><p>Que vous soyez à Casablanca ou à Bruxelles, trouvez-vous facile de faire la différence entre un récit de tradition (la Sira) et un fait prouvé par l'archéologie ou des documents d'époque ?</p></Card>
         <Card><div className="kicker">Sur la neutralité</div><p>Est-ce que vous pensez qu'un historien peut vraiment rester 100 % neutre quand il travaille sur un sujet qui touche à la foi et aux convictions de millions de personnes ?</p></Card>
       </div>
-      <h2>Bibliographie du syllabus</h2>
+      <h2>Bibliographie</h2>
       <div className="biblio">
         <div><div className="kicker">Ressources numériques &amp; vidéos</div><ul><li>Lumni.fr — dossiers pédagogiques</li><li>YouTube — « C'est pas Sorcier », L'Islam : de Mahomet à nos jours</li></ul></div>
         <div><div className="kicker">Revues &amp; études spécialisées</div><ul><li>Magazine L'Histoire — articles sur le VIIᵉ siècle</li><li>Institut du Monde Arabe (IMA) — site officiel</li></ul></div>
@@ -1548,7 +1548,7 @@ const QuizPage = ({ onPass }) => {
   const answeredCount=Object.keys(picks).length;
   return (
     <div className="page page-prose">
-      <ChapterHeader number="QZ" kicker="Vérifier ses connaissances" title="Quiz visuel" sub={`${QUIZ.length} questions tirées du syllabus.`}/>
+      <ChapterHeader number="QZ" kicker="Vérifier ses connaissances" title="Quiz visuel" sub={`${QUIZ.length} questions pour tester tes connaissances.`}/>
       <div className="quiz-meta">
         <ProgressBar value={answeredCount} max={QUIZ.length} label="Questions répondues"/>
         {submitted&&<div className={`quiz-score ${score>=8?"good":""}`}>Score : <strong>{score}/{QUIZ.length}</strong>{score>=8?" — Œil de l'historien obtenu.":" — Encore un effort."}</div>}
@@ -1755,7 +1755,7 @@ const App = () => {
       <aside className={`sidebar ${sideOpen?"is-open":""}`}>
         <div className="brand" onClick={()=>go("accueil")}>
           <div className="brand-mark" aria-hidden="true"><RosetteMark size={22}/></div>
-          <div><div className="brand-name">histoire</div><div className="brand-sub">syllabus interactif</div></div>
+          <div><div className="brand-name">histoire</div><div className="brand-sub">cours interactif</div></div>
         </div>
         {Object.entries(navGroups).map(([g,items])=>(
           <div key={g} className="nav-group">
@@ -1789,7 +1789,7 @@ const App = () => {
           <button className="icon-btn topbar-menu" onClick={()=>setSideOpen(o=>!o)} aria-label="Menu"><Icon name="menu" size={18}/></button>
           <div className="search">
             <button className="search-trigger" onClick={()=>setSearchOpen(true)} aria-label="Rechercher">
-              <Icon name="search" size={16}/><span>Rechercher dans le syllabus…</span><kbd>/</kbd>
+              <Icon name="search" size={16}/><span>Rechercher dans le cours…</span><kbd>/</kbd>
             </button>
           </div>
           <div className="topbar-right">
