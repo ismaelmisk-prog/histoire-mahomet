@@ -1461,10 +1461,12 @@ const DiffusionPage = ({ fav, onFav }) => (
         <Card key={d.n} className="diffusion-card"><div className="diffusion-num">{d.n}</div><h3>{d.title}</h3><p>{d.body}</p></Card>
       ))}
     </div>
-    <Card className="callout">
-      <div className="callout-head"><Icon name="compass" size={18}/><span>Document visuel</span></div>
-      <ImagePlaceholder ratio="16 / 9" label="[ image · La Kaaba à La Mecque ]" note="Ancien sanctuaire polythéiste devenu le centre du monothéisme musulman."/>
-    </Card>
+    <figure style={{margin:"28px 0 8px",borderRadius:"var(--r)",overflow:"hidden",border:"1px solid var(--rule)"}}>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Kaaba_Mecca.jpg" alt="La Kaaba à La Mecque" style={{width:"100%",display:"block",maxHeight:"480px",objectFit:"cover"}}/>
+      <figcaption style={{padding:"10px 16px",fontFamily:"var(--font-mono)",fontSize:"0.74rem",color:"var(--ink-muted)",letterSpacing:"0.04em",background:"var(--surface)"}}>
+        La Kaaba à La Mecque — Ancien sanctuaire polythéiste devenu le centre du monothéisme musulman. © Pras / CC BY 3.0
+      </figcaption>
+    </figure>
   </div>
 );
 
