@@ -1476,6 +1476,7 @@ const FactsPage = ({ fav, onFav }) => (
     <div className="facts-table">
       <div className="facts-head">
         <div className="facts-col facts-col-h"><Icon name="scale" size={18}/><span>Ce que fait l'historien</span></div>
+        <div/>
         <div className="facts-col facts-col-b"><Icon name="flag" size={18}/><span>Ce qui relève de la croyance</span></div>
       </div>
       {FACT_VS_BELIEF.map((row,i)=>(
@@ -1496,6 +1497,10 @@ const ConclusionPage = ({ fav, onFav }) => (
       <p className="lead">En gros, dans notre travail, on a compris que Mahomet est un personnage très important pour l'histoire, pas seulement pour la religion.</p>
       <p>Ce qu'on retient, c'est que l'islam ne s'est pas propagé par magie. Il s'est propagé parce que les gens en avaient marre des inégalités, parce que les marchands racontaient ce qu'ils entendaient dans les autres villes, et parce que Mahomet a été un bon chef pour unir les tribus qui se faisaient la guerre.</p>
       <p>Le plus important dans notre mission de groupe, c'était d'apprendre à ne pas mélanger la croyance et l'histoire. On a vu qu'on peut étudier la vie d'un prophète de façon neutre, comme on étudie la vie d'un roi ou d'un empereur, en cherchant des preuves et des explications logiques.</p>
+      <Card className="callout">
+        <div className="callout-head"><Icon name="compass" size={18}/><span>Ce que nous avons compris</span></div>
+        <p>« Voici ce que notre groupe a compris à ce stade du travail. Nous aimerions connaître votre point de vue ou ce que vous avez déjà appris sur ce sujet. »</p>
+      </Card>
       <h2>Questions ouvertes</h2>
       <div className="open-questions">
         <Card><div className="kicker">Sur la méthode</div><p>Que vous soyez à Casablanca ou à Bruxelles, trouvez-vous facile de faire la différence entre un récit de tradition (la Sira) et un fait prouvé par l'archéologie ou des documents d'époque ?</p></Card>
